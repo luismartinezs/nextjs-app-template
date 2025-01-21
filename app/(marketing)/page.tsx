@@ -1,5 +1,3 @@
-"use server"
-
 export default async function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">

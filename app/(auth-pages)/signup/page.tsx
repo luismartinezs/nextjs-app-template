@@ -1,5 +1,3 @@
-"use server"
-
 export default async function SignupPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-12 sm:px-6 lg:px-8">

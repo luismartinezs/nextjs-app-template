@@ -20,6 +20,7 @@ This is a web app template.
 - Payments: Stripe
 - Analytics: Umami
 - Deployment: Vercel
+- Tooling: pnpm
 
 # Project Structure
 
@@ -103,7 +104,6 @@ It uses Next.js, Tailwind, Shadcn, and Framer Motion.
 
 ##### Server Components
 
-- Use `"use server"` at the top of the file.
 - Implement Suspense for asynchronous data fetching to show loading states while data is being fetched.
 - If no asynchronous logic is required for a given server component, you do not need to wrap the component in `<Suspense>`. You can simply return the final UI directly since there is no async boundary needed.
 - If asynchronous fetching is required, you can use a `<Suspense>` boundary and a fallback to indicate a loading state while data is loading.
@@ -112,8 +112,6 @@ It uses Next.js, Tailwind, Shadcn, and Framer Motion.
 Example of a server layout:
 
 ```tsx
-"use server"
-
 export default async function ExampleServerLayout({
   children
 }: {
@@ -126,8 +124,6 @@ export default async function ExampleServerLayout({
 Example of a server page (with async logic):
 
 ```tsx
-"use server"
-
 import { Suspense } from "react"
 import { SomeAction } from "@/modules/module_name/server/some-actions.tsx"
 import SomeComponent from "@/modules/module_name/some-component.tsx"
@@ -150,8 +146,6 @@ async function SomeComponentFetcher() {
 Example of a server page (no async logic required):
 
 ```tsx
-"use server"
-
 import SomeClientComponent from "@/modules/module_name/client/some-client-component.tsx"
 
 // In this case, no asynchronous work is being done, so no Suspense or fallback is required.
@@ -163,8 +157,6 @@ export default async function ExampleServerPage() {
 Example of a server component:
 
 ```tsx
-"use server"
-
 interface ExampleServerComponentProps {
   // Your props here
 }
