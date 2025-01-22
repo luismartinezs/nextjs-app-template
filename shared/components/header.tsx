@@ -14,7 +14,7 @@ export default async function Header() {
 
         {/* Navigation - Centered */}
         <nav className="hidden flex-1 justify-center md:flex">
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center gap-6">
             <Link
               href="/features"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
@@ -37,14 +37,14 @@ export default async function Header() {
         </nav>
 
         {/* Auth Buttons - Right */}
-        <div className="flex items-center space-x-4">
-          <Link href="/sign-in">
-            <Button variant="ghost" size="sm">
+        <div className="flex items-center gap-4">
+          <Link href="/login">
+            <Button variant="ghost" size="sm" tabIndex={-1}>
               Sign In
             </Button>
           </Link>
-          <Link href="/sign-up">
-            <Button size="sm">Get Started</Button>
+          <Link href="/signup">
+            <Button size="sm" tabIndex={-1}>Get Started</Button>
           </Link>
         </div>
       </div>
